@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { IconName } from "react-icons/fa";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getUserWithStoredToken } from "./store/user/thunks";
+import { Routes, Route } from "react-router-dom";
+import { Navigation, MessageBox } from "./components";
+import { Homepage, Login, SignUp } from "./pages"
+import { ContactPage } from "./pages/ContactPage";
+
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUserWithStoredToken());
+  }, [dispatch]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello
-        </a>
-      </header>
+    <div>
+      <Navigation/>
+      <MessageBox/>
+      <Routes>
+        <Route path="/" element={<Homepage />}/>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </div>
   );
 }
