@@ -1,5 +1,4 @@
 import "./App.css";
-import { IconName } from "react-icons/fa";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getUserWithStoredToken } from "./store/user/thunks";

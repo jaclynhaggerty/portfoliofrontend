@@ -5,6 +5,9 @@ import { selectToken, selectUser } from "../store/user/selectors"
 import { logOut } from "../store/user/slice"
 import { Link } from "react-router-dom"
 import { FaPaw } from "react-icons/fa";
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100&display=swap');
+</style>
 
 export const Navigation = () => {
   const [open, setOpen] = useState(false)
@@ -66,6 +69,7 @@ const Logo = styled.a`
   text-decoration: none;
   font-weight: 800;
   font-size: 1.7rem;
+  font-family: 'Bitter', serif;
 
   span {
     font-weight: 300;
@@ -80,7 +84,7 @@ const Hamburger = styled.div`
   span {
     height: 2px;
     width: 25px;
-    background-color: #ECECEC;
+    background-color: #DE6E4B;
     margin-bottom: 4px;
     border-radius: 5px;
   }
