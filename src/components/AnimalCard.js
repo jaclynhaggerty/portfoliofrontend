@@ -9,7 +9,6 @@ import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
 
 const AnimalCard = (props) => {
 const navigate = useNavigate()
-
 const cloud = new Cloudinary({
     cloud: {
         cloudName: "dmcoddd6m"
@@ -18,14 +17,12 @@ const cloud = new Cloudinary({
 
 console.log(props.animal)
 const mainImage = cloud.image(props.animal.mainImage);
-
 mainImage.resize(fill().width(350).height(350).gravity(focusOn(FocusOn.face())))
 
 const handleClick = (e) => {
     e.preventDefault()
     navigate(`/animals/${props.animal.id}`)
 }
-
     return (
         <Container>
             <p> {props.animal.name}</p>
@@ -42,10 +39,11 @@ const Container = styled.div`
 `
 
 const StyledButton = styled.button`
-
+margin-top: 10px;
+margin-left: 120px;
+margin-right: 120px;
+margin-bottom: 20px;
+height: 30px;
 `
-
-
-
 
 export default AnimalCard

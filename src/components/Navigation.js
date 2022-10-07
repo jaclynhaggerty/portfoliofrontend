@@ -43,7 +43,7 @@ const MenuLink = styled(Link)`
   text-decoration: none;
   color: #ECECEC;
   transition: all 0.3s ease-in;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 
   &:hover {
     color: #9CC094;
@@ -56,7 +56,7 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: #57886C;
+  background: #79A48C;
   /* position: absolute; */
   top: 0;
   left: 0;

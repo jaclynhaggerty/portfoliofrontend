@@ -1,21 +1,22 @@
 import styled from "styled-components";
+import banner from "../images/banner.png"
 
 
 export default function Header() {
   return (
     <Container>
       <img 
-       src= "https://www.clintmooreanimalhospital.com/wp-content/uploads/2016/11/animals-1024x398-1-1024x576.png"
+       src= {banner}
        alt="not found" 
-       width="800px"
-       height="300px"
+       width="1584px"
+       height="278px"
      />
     </Container>
   );
 }
 
 const Container = styled.div`
-    background-color: #eee;
+    background-color: #eee4da;
     display: flex;
     justify-content: center;
 `
