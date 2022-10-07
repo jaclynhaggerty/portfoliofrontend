@@ -7,6 +7,7 @@ import { Navigation, MessageBox } from "./components";
 import { Homepage, Login, SignUp } from "./pages"
 import { ContactPage } from "./pages/ContactPage";
 import { DetailsPage } from "./pages/DetailsPage";
+import Header from "./components/Header";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   return (
     <div>
       <Navigation/>
+      <Header/>
       <MessageBox/>
       <Routes>
         <Route path="/" element={<Homepage />}/>

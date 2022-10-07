@@ -12,8 +12,7 @@ export const Homepage = () => {
             setAnimals(response.data)
         }
         loadAllAnimals()
-    })
-
+    }, [])
 
     return (
         <div style={{ textAlign: "center" }}>
@@ -23,11 +22,14 @@ export const Homepage = () => {
                     all kinds. We provide affordable and quality veterinary care for our community, and are passionate about
                     animals and connecting them with their future forever families once they
                     are happy and healthy.</p>
-                    {animals.map((animal)=> {
-return (
-    <AnimalCard key={animal.id} animal={animal} > </AnimalCard>
-)
+
+                <CardContainer>
+                    {animals.map((animal) => {
+                        return (
+                            <AnimalCard key={animal.id} animal={animal}> </AnimalCard>
+                        )
                     })}
+                </CardContainer>
             </Container>
         </div>
     )
@@ -36,4 +38,12 @@ return (
 const Container = styled.div`
 position: relative;
 display: 'flex';
+`
+
+const CardContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
 `
