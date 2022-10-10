@@ -9,7 +9,9 @@ import { ContactPage } from "./pages/ContactPage";
 import { DetailsPage } from "./pages/DetailsPage";
 import Header from "./components/Header";
 import { AdminReview } from "./pages/AdminReview";
+import Footer from "./components/Footer";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const dispatch = useDispatch();
@@ -30,7 +32,9 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/admin/applications" element={<AdminReview />} />
       </Routes>
+      <Footer />
     </div>
+    
   );
 }
 

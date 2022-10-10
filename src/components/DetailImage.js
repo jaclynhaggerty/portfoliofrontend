@@ -11,7 +11,7 @@ const DetailImage = (props) => {
         }
     })
     const image = cloud.image(props.image)
-    image.resize(fill().width(200).height(200))
+    image.resize(fill().width(500).height(400))
     return (
         <Container>
             <AdvancedImage cldImg={image}></AdvancedImage>

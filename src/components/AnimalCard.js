@@ -44,14 +44,5 @@ const Container = styled.div`
     flex-direction: column;
 `
 
-// const StyledButton = styled.button`
-// margin-top: 10px;
-// margin-left: 120px;
-// margin-right: 120px;
-// margin-bottom: 20px;
-// height: 30px;
-// background-color: #FAFAFA;
-// border-radius: 12px;
-// `
 
 export default AnimalCard
