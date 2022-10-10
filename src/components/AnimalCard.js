@@ -5,6 +5,7 @@ import { Cloudinary } from "@cloudinary/url-gen"
 import { fill } from "@cloudinary/url-gen/actions/resize"
 import { focusOn } from "@cloudinary/url-gen/qualifiers/gravity"
 import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
+import CuteButton from "./CuteButton"
 
 
 const AnimalCard = (props) => {
@@ -17,7 +18,12 @@ const cloud = new Cloudinary({
 
 console.log(props.animal)
 const mainImage = cloud.image(props.animal.mainImage);
-mainImage.resize(fill().width(350).height(350).gravity(focusOn(FocusOn.face())))
+mainImage.resize(
+    fill()
+        .width(350)
+        .height(350)
+        .gravity(focusOn(FocusOn.face()))
+    )
 
 const handleClick = (e) => {
     e.preventDefault()
@@ -26,8 +32,8 @@ const handleClick = (e) => {
     return (
         <Container>
             <p> {props.animal.name}</p>
-            <AdvancedImage cldImg={mainImage}></AdvancedImage>
-            <StyledButton onClick= {(e) => handleClick(e)}> See More </StyledButton> 
+            <AdvancedImage style={{ borderRadius: '8px' }} cldImg={mainImage}></AdvancedImage>
+            <CuteButton onClick={(e) => handleClick(e)} style={{ marginTop: '10px' }}> See More </CuteButton> 
         </Container>
     )
 }
@@ -38,12 +44,14 @@ const Container = styled.div`
     flex-direction: column;
 `
 
-const StyledButton = styled.button`
-margin-top: 10px;
-margin-left: 120px;
-margin-right: 120px;
-margin-bottom: 20px;
-height: 30px;
-`
+// const StyledButton = styled.button`
+// margin-top: 10px;
+// margin-left: 120px;
+// margin-right: 120px;
+// margin-bottom: 20px;
+// height: 30px;
+// background-color: #FAFAFA;
+// border-radius: 12px;
+// `
 
 export default AnimalCard

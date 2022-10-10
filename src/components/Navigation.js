@@ -25,7 +25,6 @@ export const Navigation = () => {
         <span />
       </Hamburger>
       <Menu open={open}>
-
         {!!token && user && user.isAdmin && <MenuLink to="/admin/applications">Manage Applications</MenuLink>}
         <MenuLink to="/contact">Contact Us</MenuLink>
         {token

@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import styled from "styled-components"
+import CuteButton from "../components/CuteButton"
 import DetailImage from "../components/DetailImage"
 
 export const DetailsPage = () => {
@@ -32,7 +33,7 @@ export const DetailsPage = () => {
                 <Container>
                     <h1> {animal.name}</h1>
                     <p> {animal.description}</p>
-                    <StyledButton> Apply To Adopt </StyledButton>
+                    <CuteButton>Adopt!</CuteButton>
                 </Container>
             </OuterContainer>
         </div>
@@ -45,13 +46,29 @@ margin-left: 550px;
 margin-right: 550px;
 margin-bottom: 20px;
 height: 30px;
+background-color: #FAFAFA;
+border-radius: 12px;
 `
+
+
+
+
+
+
+
+
 
 const OuterContainer = styled.div`
 display: flex;
 `
 
+
+
+
+
+
 const Container = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    
 `

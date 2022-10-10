@@ -8,6 +8,7 @@ import { Homepage, Login, SignUp } from "./pages"
 import { ContactPage } from "./pages/ContactPage";
 import { DetailsPage } from "./pages/DetailsPage";
 import Header from "./components/Header";
+import { AdminReview } from "./pages/AdminReview";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/animals/:id" element={<DetailsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/admin/applications" element={<AdminReview />} />
       </Routes>
     </div>
   );

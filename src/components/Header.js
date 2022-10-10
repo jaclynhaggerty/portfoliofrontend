@@ -19,4 +19,5 @@ const Container = styled.div`
     background-color: #eee4da;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 `
