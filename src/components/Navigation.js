@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { selectToken, selectUser } from "../store/user/selectors"
 import { logOut } from "../store/user/slice"
 import { Link } from "react-router-dom"
-import { FaPaw } from "react-icons/fa";
+import { FaPaw, FaShoppingCart } from "react-icons/fa";
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100&display=swap');
 </style>
@@ -27,6 +27,8 @@ export const Navigation = () => {
       <Menu open={open}>
         {!!token && user && user.isAdmin && <MenuLink to="/admin/applications">Manage Applications</MenuLink>}
         <MenuLink to="/contact">Contact Us</MenuLink>
+        <MenuLink to= "/products"> Shop! </MenuLink>
+        <MenuLink to= "/cart"> <FaShoppingCart/> </MenuLink>
         {token
           ? <button onClick={() => dispatch(logOut())}>Logout</button>
           : <MenuLink to="/login">Login</MenuLink>}
@@ -45,7 +47,7 @@ const MenuLink = styled(Link)`
   font-size: 1.2rem;
 
   &:hover {
-    color: #9CC094;
+    color: #fff;
   }
 `
 
@@ -69,10 +71,15 @@ const Logo = styled.a`
   font-weight: 800;
   font-size: 1.7rem;
   font-family: 'Bitter', serif;
+  transition: all 0.3s ease-in;
 
   span {
     font-weight: 300;
     font-size: 1.3rem;
+  }
+
+  &:hover {
+    color: #fff;
   }
 `
 

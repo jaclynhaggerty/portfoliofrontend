@@ -1,7 +1,7 @@
 import "./CuteButton.css"
 
 const CuteButton = (props) => (
-    <button {...props} className="cute-button"></button>
+    <button {...props} onClick={(e) => props.onClick(e)} className="cute-button"></button>
 );
 
 export default CuteButton;
