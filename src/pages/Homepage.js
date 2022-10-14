@@ -27,7 +27,7 @@ export const Homepage = () => {
                 <CardContainer>
                     {animals.map((animal) => {
                         return (
-                            <AnimalCard key={animal.id} animal={animal}> </AnimalCard>
+                          <AnimalCard key={animal.id} animal={animal}> </AnimalCard>
                         )
                     })}
                 </CardContainer>
@@ -36,10 +36,10 @@ export const Homepage = () => {
     )
 }
 
-
 const Text = styled.p`
 font-family: 'Didact Gothic', sans-serif;
 font-size: 20px;
+
 `
 
 const Header = styled.h1`  

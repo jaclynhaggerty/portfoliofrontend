@@ -27,7 +27,7 @@ export const DetailsPage = () => {
             dispatch(showMessageWithTimeout(
                 'info',
                 true,
-                "You must be registered to apply for adoption. Please login or create an account.",
+                "Uh-Oh! You must be registered to apply for adoption! Please login or create an account.",
                 8000
             ));
         }
@@ -59,7 +59,7 @@ export const DetailsPage = () => {
                     </Carousel>
                 </Container>
                 <Container>
-                    <Name> {animal.name}</Name>
+                    <Name style={{textDecoration: "underline"}}> -{animal.name}-</Name>
                     <Desc> <p> {animal.description}</p> </Desc>
                     <CuteButton onClick={handleClick} style={{ display: "inline-flex" }}>Adopt!</CuteButton>
                 </Container>

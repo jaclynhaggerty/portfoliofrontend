@@ -30,13 +30,18 @@ const handleClick = (e) => {
 }
     return (
         <Container>
-  <p> {props.animal.name}</p> 
+  <Name> {props.animal.name}</Name> 
             <AdvancedImage style={{ borderRadius: '8px' }} cldImg={mainImage}></AdvancedImage>
             <CuteButton onClick={(e) => handleClick(e)} style={{ marginTop: '10px' }}> See More </CuteButton> 
         </Container>
     )
 }
 
+const Name= styled.p`
+font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    color: #84B68B;
+`
 
 const Container = styled.div`
     display: flex;
