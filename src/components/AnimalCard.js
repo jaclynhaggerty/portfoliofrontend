@@ -7,7 +7,6 @@ import { focusOn } from "@cloudinary/url-gen/qualifiers/gravity"
 import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
 import CuteButton from "./CuteButton"
 
-
 const AnimalCard = (props) => {
 const navigate = useNavigate()
 const cloud = new Cloudinary({
@@ -31,12 +30,13 @@ const handleClick = (e) => {
 }
     return (
         <Container>
-            <p> {props.animal.name}</p>
+  <p> {props.animal.name}</p> 
             <AdvancedImage style={{ borderRadius: '8px' }} cldImg={mainImage}></AdvancedImage>
             <CuteButton onClick={(e) => handleClick(e)} style={{ marginTop: '10px' }}> See More </CuteButton> 
         </Container>
     )
 }
+
 
 const Container = styled.div`
     display: flex;

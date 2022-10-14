@@ -18,11 +18,12 @@ export const Homepage = () => {
         <div style={{ textAlign: "center" }}>
             <Container>
                 <Header style={{ textDecoration: "underline" }} >About Us</Header>
+                <Text>
                 <p>We are a non-profit organization dedicated to rescuing and rehabilitating animals of
                     all kinds. We provide affordable and quality veterinary care for our community, and are passionate about
                     animals and connecting them with their future forever families once they
                     are happy and healthy.</p>
-
+                    </Text>
                 <CardContainer>
                     {animals.map((animal) => {
                         return (
@@ -35,8 +36,16 @@ export const Homepage = () => {
     )
 }
 
+
+const Text = styled.p`
+font-family: 'Didact Gothic', sans-serif;
+font-size: 20px;
+`
+
 const Header = styled.h1`  
-    font-family: 'Silkscreen', cursive;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    color: #84B68B;
 `
 
 const Container = styled.div`

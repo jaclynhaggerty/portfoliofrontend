@@ -57,15 +57,10 @@ export const DetailsPage = () => {
                             ))
                         }
                     </Carousel>
-                    {/* {
-                        !!images && images.map((img) => (
-                            <DetailImage key={img} image={img}></DetailImage>
-                        ))
-                    } */}
                 </Container>
                 <Container>
                     <Name> {animal.name}</Name>
-                    <p> {animal.description}</p>
+                    <Desc> <p> {animal.description}</p> </Desc>
                     <CuteButton onClick={handleClick} style={{ display: "inline-flex" }}>Adopt!</CuteButton>
                 </Container>
             </OuterContainer>
@@ -73,20 +68,24 @@ export const DetailsPage = () => {
     )
 }
 
-
+const Desc = styled.p`
+font-family: 'Didact Gothic', sans-serif;
+font-size: 20px;
+`
 const Name = styled.h1`
     text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 45px;
+    color: #84B68B;
 `
 
 const OuterContainer = styled.div`
 display: flex;
 `
-
-
 const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 40px 40px 0 40px;
+    margin: 30px 30px 0 30px;
 `
