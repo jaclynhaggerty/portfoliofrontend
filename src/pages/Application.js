@@ -7,6 +7,7 @@ import CuteButton from '../components/CuteButton';
 import { showMessageWithTimeout } from '../store/appState/thunks';
 import { selectToken } from '../store/user/selectors';
 import styled from 'styled-components';
+import { center, left } from '@cloudinary/url-gen/qualifiers/textAlignment';
 
 export const Application = () => {
     const dispatch = useDispatch();
@@ -64,6 +65,7 @@ export const Application = () => {
 
     return (
         <div>
+          <Title> <p> Form for Adoption </p> </Title>
             <Center>
                 <Form onSubmit={(e) => handleSubmit(e)}>
                     <Form.Check
@@ -102,7 +104,7 @@ export const Application = () => {
                         onChange={(e) => setCanContact(e.target.value === 'false' ? false : true)}
                     />
                     {/* Had to add an empty function so that the cute button doesn't throw an error */}
-                    <CuteButton type="submit" onClick={() => { }}> Submit! </CuteButton>
+                    <CuteButton style={{marginTop: '15px', marginLeft: '120px'}} type="submit" onClick={() => { }}> Submit! </CuteButton>
                 </Form>
             </Center>
         </div>
@@ -115,3 +117,10 @@ display: flex;
 justify-content: space-around;
 `
 
+const Title=styled.p`
+text-align: center;
+font-family: 'Amatic SC', cursive;
+font-size: 30px;
+color: #84B68B;
+text-decoration: underline;
+`
