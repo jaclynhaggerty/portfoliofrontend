@@ -5,8 +5,6 @@ import CuteButton from "../components/CuteButton"
 import { AdvancedImage } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/url-gen";
 
-
-
 const ProductImage = (props) => {
     const cloud = new Cloudinary({
         cloud: {
@@ -23,7 +21,6 @@ const Image = styled(AdvancedImage)`
     width: 300px;
     height: 300px;
 `
-
 export const ProductsPage = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
@@ -65,7 +62,6 @@ color: #84B68B;
 const Name = styled.h1`
 font-family: 'Amatic SC', cursive;
 `
-
 
 const GridContainer = styled.div`
     display: flex;
