@@ -6,7 +6,7 @@ import { selectToken } from "../store/user/selectors"
 
 
 export const AdminReview = () => {
-    const baseUrl = 'http://localhost:4000/applications'
+    const baseUrl = 'https://cuddlycritters.herokuapp.com/applications'
     const token = useSelector(selectToken);
     const headers = {
         headers: {

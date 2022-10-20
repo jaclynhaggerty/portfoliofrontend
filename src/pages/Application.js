@@ -23,7 +23,7 @@ export const Application = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const url = "http://localhost:4000/applications"
+        const url = "https://cuddlycritters.herokuapp.com/applications"
         const headers = {
             headers: {
                 Authorization: `Bearer ${token}`

@@ -25,7 +25,7 @@ export const ProductsPage = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
         const loadProducts = async () => {
-            const url = "http://localhost:4000/products"
+            const url = "https://cuddlycritters.herokuapp.com/products"
             const response = await axios.get(url)
             setProducts(response.data)
         }

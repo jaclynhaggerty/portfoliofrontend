@@ -35,7 +35,7 @@ export const DetailsPage = () => {
 
     useEffect(() => {
         const loadAnimal = async () => {
-            const url = `http://localhost:4000/animals/${id}`
+            const url = `https://cuddlycritters.herokuapp.com/animals/${id}`
             const response = await axios.get(url)
             setAnimal(response.data)
             setImages([response.data.mainImage, ...response.data.extraImages])

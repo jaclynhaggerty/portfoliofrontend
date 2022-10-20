@@ -7,7 +7,7 @@ export const Homepage = () => {
     const [animals, setAnimals] = useState([])
     useEffect(() => {
         const loadAllAnimals = async () => {
-            const url = "http://localhost:4000/animals"
+            const url = "https://cuddlycritters.herokuapp.com/animals"
             const response = await axios.get(url)
             setAnimals(response.data)
         }
