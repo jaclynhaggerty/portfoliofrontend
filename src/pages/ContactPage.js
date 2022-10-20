@@ -10,13 +10,19 @@ export const ContactPage = () => {
                 <p> Phone: +31 697959252 </p>
                 <p> Email: cuddlycrittersadoption@gmail.com </p>
                 <p> Mailing Address: Van Noordtstraat 26, 1013 SM Amsterdam, NL </p>
-                <p><FaInstagramSquare fontSize="1.5em"/> 
-                 <FaTwitter fontSize="1.5em"/>   
-                 <FaFacebook fontSize="1.5em" /></p>
+                <Icons> 
+                <p><FaInstagramSquare/> 
+                 <FaTwitter/>   
+                 <FaFacebook/></p>
+                 </Icons>
             </Container>
         </div>
     )
 }
+
+const Icons = styled.div`
+font-size: 1.5em;
+`
 
 const Container = styled.div`
 position: relative;

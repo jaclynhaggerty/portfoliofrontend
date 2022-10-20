@@ -17,7 +17,7 @@ export const Homepage = () => {
     return (
         <div style={{ textAlign: "center" }}>
             <Container>
-                <Header style={{ textDecoration: "underline" }} >About Us</Header>
+                <Header style={{ textDecoration: "underline" }} >-About Us-</Header>
                 <Text>
                 <p>We are a non-profit organization dedicated to rescuing and rehabilitating animals of
                     all kinds. We provide affordable and quality veterinary care for our community, and are passionate about

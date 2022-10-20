@@ -42,6 +42,7 @@ const Name = styled.p`
 font-family: 'Amatic SC', cursive;
 font-size: 35px;
 color: #84B68B;
+text-decoration: underline;
 `
 
 const Container = styled.div`

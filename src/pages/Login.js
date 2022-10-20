@@ -31,7 +31,7 @@ export const Login = () => {
   return (
     <div style={{textAlign: "center"}}>
       <Container>
-        <Title>Login</Title>
+       <Title>Login</Title> 
         <form onSubmit={submitForm}>
           <Input 
             placeholder="email"
@@ -66,3 +66,6 @@ const SubText = styled.p`
   color: #1E3163;
   padding: 20px 0px 5px 0px;
 `;
+
+
+
